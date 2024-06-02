@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  auth:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: authorization
+    restart: on-failure
+    ports:
+      - "8009:8080"
+
